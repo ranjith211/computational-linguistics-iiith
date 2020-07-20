@@ -63,6 +63,13 @@ body{
       color: black;
       visibility: hidden;
   } 
+  #seven{
+    position: center;
+      
+      font-size: 20px;
+      color: black;
+    visibility: hidden;
+  }
   
   
   .drop
