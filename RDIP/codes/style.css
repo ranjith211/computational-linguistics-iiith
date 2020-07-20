@@ -19,9 +19,12 @@ body{
     font-size: 20px;
   }
   #three{
-    
-    font-size: 20px;
-  
+    font-size:20px;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+       line-height: 0.1;
+       color:#00009C;
+       font-weight: bolder;
+       padding-bottom: 10px;
   }
   
   #four{
@@ -58,6 +61,7 @@ body{
       
       font-size: 20px;
       color: black;
+      visibility: hidden;
   } 
   
   
