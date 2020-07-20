@@ -1,0 +1,55 @@
+.goal
+{
+  padding-left:30px;
+  background-color: rgb(204, 238, 238);
+  font-size: 50px;
+  font-family: serif;
+  text-align: left;
+}
+#two{
+  color: blue;
+  font-style: italic;
+  font-size: 20px;
+}
+.drop a
+{
+padding:14px 16px;
+font-size: 15px;
+color: #00688B   ;
+text-decoration: underline;
+}
+.drop a:hover
+{
+
+  color:white;
+  background: #104E8B   ;
+  text-decoration: underline;
+}
+.drop
+{
+  background-color: white;
+  height:900px;
+  font-family: sans-serif;
+  margin:30px;
+  box-shadow: 0px 20px 25px 5px   lightslategray;
+}
+#exp h4
+{
+  font-size: 40px;
+  padding-left:60px;
+  padding-top: 44px;
+  padding-bottom: 10px
+}
+#exp select
+{
+  font-size:17px;
+
+}
+#one
+{
+  font-size:20px;
+  font-family:  sans-serif;
+  line-height: 0.2;
+  color:rgb(0, 0, 156);
+  font-weight: bold;
+}

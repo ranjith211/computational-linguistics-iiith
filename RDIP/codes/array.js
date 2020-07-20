@@ -18,3 +18,24 @@ var fourth  =["राम खाकर सोया", "खाकर राम स
 var fifth   =["बिल्लियों को मारकर कुत्ता सो गया", "मारकर बिल्लियों को कुत्ता सो गया", "बिल्लियों को मारकर सो गया कुत्ता", "मारकर बिल्लियों को सो गया कुत्ता", "कुत्ता सो गया बिल्लियों को मारकर"	, "कुत्ता सो गया मारकर बिल्लियों को", "सो गया कुत्ता बिल्लियों को मारकर", "सो गया कुत्ता मारकर बिल्लियों को"]
 var sixth   =["एक लाल किताब वहाँ है", "एक लाल किताब है वहाँ", "वहाँ है एक लाल किताब", "है वहाँ एक लाल किताब"]
 var seventh =["एक बड़ी सी किताब वहाँ है	", "एक बड़ी सी किताब है वहाँ", "बड़ी सी एक किताब वहाँ है", "बड़ी सी एक किताब है वहाँ", "वहाँ है एक बड़ी सी किताब", "वहाँ है बड़ी सी एक किताब", " है वहाँ एक बड़ी सी किताब", "है वहाँ बड़ी सी एक किताब"] 
+
+
+function funct()
+{
+if(document.getElementById("english").selected)
+{
+	document.getElementById("one").innerHTML="Form a sentence (Declarative or Interrogative or any other type) from the given words"
+	document.getElementById("two").innerHTML="(select the buttons in proper order)"
+}
+else if (document.getElementById("hindi").selected) 
+{
+	document.getElementById("one").innerHTML="Form a sentence (Declarative or Interrogative or any other type) from the given words"
+	document.getElementById("two").innerHTML="(select the buttons in proper order)"
+}
+else
+{
+	document.getElementById("one").innerHTML=""
+	document.getElementById("two").innerHTML=""
+	alert("Choose a language!");
+}
+} 
