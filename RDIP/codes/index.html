@@ -7,11 +7,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
-   <script src="array.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
   <body >
+    <img id="img" src="http://cl-iiith.vlabs.ac.in/images/logo.jpg">
+    <p id="white">COMPUTATIONAL LINGUISTICS LAB</p>
         <div class="goal">
        <p>Forming Sentences-2</p>
         <div class="drop">
@@ -20,23 +21,25 @@
             <center>
               <select onchange="funct()">
                   <option value="none" selected>---Select Language---</option>
-                  <option onselect="revert()" id="english">English</option>
-                  <option value="Hindi" onselect="revert()" id="hindi">Hindi</option></select><br>
+                  <option  id="eng" onclick="revert()">English</option>
+                  <option value="Hindi" id="hin" onclick="revert()">Hindi</option></select><br>
     <p id="one"></p>
     <p id="two" style="font-weight:lighter;"></p>
     <span id="three">&nbsp;</span>
     <p> <span id="four"></span><span id="fourr"></span></p>
     <p id="five"></p>
     <button id="six" onclick="revert()">Re-form the sentence</button><br/>
-    <button id="eleven" onclick="reverty()">Re-form the sentence</button><br/>
-    <button id="seven" onclick="check()">check correctness of the sentence</button>
+        <button id="sixx" onclick="reverty()">Re-form the sentence</button><br/>
+    <button id="seven" onclick="findout()">check correctness of the sentence</button>
     <p id="eight"></p>
+    <p id="eightt"></p>
+        <button id="ten"  onclick="toggle()">Get Correct Sentence</button><br>
     <p id="nine"></p>
-        <p id="twelve"></p>
 
   </center>
 </section>
+</div>
   </div>
-    
+       <script src="array.js"></script>
 </body>
 </html>
