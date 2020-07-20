@@ -1,11 +1,11 @@
 body{
 
     background-color:#012943 ;
-    padding:0px 50px;
   }
   .goal
   {
-    margin:0px 85px;
+    margin: auto;
+    width: 80%;
     padding-left:30px;
     padding-right: 30px;
     background-color: rgb(204, 238, 238);
@@ -14,16 +14,26 @@ body{
     text-align: left;
   }
   #white{
+    margin: auto;
     color: white;
     font-size: 28px;
     font-weight: bold;
-    margin:0px 80px;
+    width: 85%;
     background-color: #1E90FF;
   }
-  #img{
-    margin:0px 80px;
-    width: 86%;
-    height: auto;
+  .head{
+    margin:auto;
+  }
+  
+  .head{
+    margin:auto;
+  }
+  #pic{
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+  
   }
   
   #two{
@@ -131,7 +141,7 @@ body{
   .drop
   {
     background-color: white;
-    height:2000px;
+    height:auto;
     font-family: sans-serif;
     margin:20px 30px;
     box-shadow: 0px 20px 5px 5px   lightslategray;
