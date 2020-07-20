@@ -71,6 +71,21 @@ body{
     visibility: hidden;
   }
   
+  #eight{
+    color: green;
+    font-size: 30px;
+  }
+  #nine{
+    color:red;
+    font-size: 30px;
+  }
+  #eleven{
+      position: center;
+      
+      font-size: 20px;
+      color: black;
+      visibility: hidden;
+  } 
   
   .drop
   {
