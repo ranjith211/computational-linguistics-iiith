@@ -38,7 +38,7 @@ var newArray= ["John ate an apple before afternoon ", "before afternoon John ate
 				"एक लाल किताब वहाँ है ", "एक लाल किताब है वहाँ ", "वहाँ है एक लाल किताब ", "है वहाँ एक लाल किताब ",
 				"एक बड़ी सी किताब वहाँ है ","एक बड़ी सी किताब है वहाँ ","बड़ी सी एक किताब वहाँ है ","बड़ी सी एक किताब है वहाँ ","वहाँ है एक बड़ी सी किताब ","वहाँ है बड़ी सी एक किताब ","है वहाँ एक बड़ी सी किताब ","है वहाँ बड़ी सी एक किताब "];
 
-
+//on clicking on re-form the sentences the sentences are reset into original or previous sentences
 
 function revert(){
   for(i=0;i<a1.length;i++){
@@ -75,7 +75,7 @@ function reverty(){
 }
 }
 }
-
+//these function checks where the formed sentence is right or wrong.
 function findout(){
   var x=String(document.getElementById("five").innerHTML).replace(/\s+$/, '');
   o=0;
