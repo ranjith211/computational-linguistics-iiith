@@ -53,6 +53,9 @@ function check()
        			 }
 	   		else{
 	   	 		document.getElementById('nine').innerHTML = "Wrong answer!!!" ;
+
+	   	 		    document.getElementById("twelve").innerHTML = "<center><button id='thirteen' onclick='gs()'>Get Correct Sentence</button></center>"
+
 				}
 }
 
@@ -169,6 +172,8 @@ function revert()
 		document.getElementById('seven').style.visibility="hidden";
 		document.getElementById("eight").innerHTML="";
 		document.getElementById('nine').innerHTML="";
+				document.getElementById('thirteen').style.visibility="hidden";
+
 }
 }
 function reverty()
@@ -189,5 +194,7 @@ function reverty()
 		document.getElementById('seven').style.visibility="hidden";
 		document.getElementById("eight").innerHTML="";
 		document.getElementById('nine').innerHTML="";
+						document.getElementById('thirteen').style.visibility="hidden";
+
 }
 }
