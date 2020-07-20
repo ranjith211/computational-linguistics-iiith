@@ -1,59 +1,91 @@
-.goal
-{
-  padding-left:30px;
-  background-color: rgb(204, 238, 238);
-  font-size: 50px;
-  font-family: serif;
-  text-align: left;
-}
-#two{
-  color: blue;
-  font-style: italic;
-  font-size: 20px;
-}
-#three{
-    font-size: 18px;
+body{
+
+    background-color:#012943 ;
+    padding:0px 50px;
+  }
+  .goal
+  {
+    margin:0px 85px;
+    padding-left:30px;
+    padding-right: 30px;
+    background-color: rgb(204, 238, 238);
+    font-size: 50px;
+    font-family: serif;
+    text-align: left;
+  }
+  #two{
+    color: blue;
+    font-style: italic;
+    font-size: 20px;
+  }
+  #three{
+    
+    font-size: 20px;
   
   }
-.drop a
-{
-padding:14px 16px;
-font-size: 15px;
-color: #00688B   ;
-text-decoration: underline;
-}
-.drop a:hover
-{
-
-  color:white;
-  background: #104E8B   ;
-  text-decoration: underline;
-}
-.drop
-{
-  background-color: white;
-  height:900px;
-  font-family: sans-serif;
-  margin:30px;
-  box-shadow: 0px 20px 25px 5px   lightslategray;
-}
-#exp h4
-{
-  font-size: 40px;
-  padding-left:60px;
-  padding-top: 44px;
-  padding-bottom: 10px
-}
-#exp select
-{
-  font-size:17px;
-
-}
-#one
-{
-  font-size:20px;
-  font-family:  sans-serif;
-  line-height: 0.2;
-  color:rgb(0, 0, 156);
-  font-weight: bold;
-}
+  
+  #four{
+       position: center;
+      
+      font-size: 20px;
+      font-style: italic;
+      color: blue;
+      font-weight: bold;
+      font-family:  sans-serif;
+  
+  }
+  #fourr{
+      
+      font-size: 20px;
+      font-style: italic;
+      color: blue;
+      font-weight: lighter;
+  
+      font-family:  sans-serif;
+  
+  }
+  #five{
+       position: center;
+      
+      font-size: 20px;
+      font-style: normal;
+      font-weight: lighter;
+      color: black;
+  }
+  
+  #six{
+      position: center;
+      
+      font-size: 20px;
+      color: black;
+  } 
+  
+  
+  .drop
+  {
+    background-color: white;
+    height:1000px;
+    font-family: sans-serif;
+    margin:20px 30px;
+    box-shadow: 0px 20px 5px 5px   lightslategray;
+  }
+  #expe
+  {
+    font-size: 40px;
+    padding-left:60px;
+    padding-top: 44px; 
+    padding-bottom: 10px
+  }
+  #exp select
+  {
+    font-size:17px;
+      
+  }
+  #one
+  {
+    font-size:20px;
+    font-family:  sans-serif;
+    line-height: 0.2;
+    color:rgb(0, 0, 156);
+    font-weight: bold;
+  }

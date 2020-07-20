@@ -1,3 +1,4 @@
+//arrays of English correct sentences
 var sent   = new Array( );
 sent[0]    = ["John ate an apple before afternoon", "before afternoon John ate an apple", "John before afternoon ate an apple"]
 sent[1]    = ["some students like to study in the night", "at night some students like to study"]
@@ -35,6 +36,23 @@ function randomize(mixed){
 	return club;
 }
 
+var resultsentence ="";
+function selected_words(id,value){
+
+	document.getElementById("four").innerHTML = "Formed Sentence ";
+	document.getElementById("fourr").innerHTML="(after selecting words):";
+							resultsentence += value + " ";
+	 document.getElementById("five").innerHTML = resultsentence;
+	document.getElementById(id).style.display = "none";
+	document.getElementById("six").innerHTML = "<button id='seven' onclick='funboi(); funct();'>Re-form the sentence</button>"
+}
+
+function funboi()
+{
+  document.getElementById("five").remove();
+  
+}
+
 function funct()
 {
 if(document.getElementById("english").selected)
@@ -49,10 +67,10 @@ if(document.getElementById("english").selected)
 		for(i=0;i<=j.length-1;i++)
 		{
 			val = j[i];
-			but = "<button id='btn"+i+"' value='"+val+" onclick='myFunction("+i+")'>"+val+"  </button> ";
+			but = "<button id='btn"+i+"'onclick='selected_words(this.id,this.value)' value='"+val+"'>"+val+"  </button> ";
 			res = res+ but;
 		}
-		three.innerHTML = res;
+		three.innerHTML = res.trim();
 }
 else if (document.getElementById("hindi").selected) 
 {
@@ -67,10 +85,10 @@ else if (document.getElementById("hindi").selected)
 		for(i=0;i<=j.length-1;i++)
 		{
 			val = j[i];
-			but = "<button id='btn"+i+"' value='"+val+"'>"+val+"</button> &nbsp;&nbsp;";
+			but = "<button id='btn"+i+"' onclick='selected_words(this.id,this.value)' value='"+val+"'>"+val+"</button> &nbsp;&nbsp;";
 			res = res+but;
 		}
-		three.innerHTML = res;
+		three.innerHTML = res.trim();
 }
 else
 {
