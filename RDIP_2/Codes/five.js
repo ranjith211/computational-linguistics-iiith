@@ -40,7 +40,20 @@ function partselect(id, value){
             partVal[i]="Noun";}
     document.getElementById("out").innerHTML = colum.trim();
         document.getElementById('submitbutton').innerHTML = "<button onclick='findout()'>Submit</button>";
-}
+}function check(){
+    var answerid = ['answer0','answer1','answer2','answer3','answer4','answer5','answer6'];
+    if(document.getElementById('englishh').selected){
+    for(var i = 0; i < show.length; i++)
+        document.getElementById(answerid[i]).innerHTML=enganswers[i];}
+    else if(document.getElementById('hindii').selected){
+    for(var i = 0; i < show.length; i++)
+        document.getElementById(answerid[i]).innerHTML = hindianswers[index][i];}
+    document.getElementById('getbutton').innerHTML = '<button onclick="uncheck()">Hide Answer</button>'
+}function uncheck() {
+    var answerid = ['answer0','answer1','answer2','answer3','answer4','answer5','answer6'];
+    for(var i = 0; i < show.length; i++)
+        document.getElementById(answerid[i]).innerHTML="";
+    document.getElementById('getbutton').innerHTML = '<button onclick="check()">Get Answer</button>'}
     var pos = require('pos');
 var words = new pos.Lexer().lex('This is some sample text. This text can contain multiple sentences.'); 
 var tagger = new pos.Tagger();
