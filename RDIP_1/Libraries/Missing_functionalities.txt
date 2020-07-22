@@ -1,0 +1,31 @@
+Functionality in Unit-4 
+
+1) Index.html is the main page which  contains js, jquery that linked this page to the other pages.
+2) When clicked on the INTRODUCTION in the menu bar, it is redirecting to the Introduction.html page. This page displays basic information about the experiment.
+3) When clicked on THEORY in the menu bar, the page is redirected to the Theory.html page. This page displays the infromation of how the experiment works.
+4) When clicked on OBJECTIV in the menu bar, it is redirecting to the Objective.html page. This page displays the objective of this experiment.
+5)  When clicked on EXPERIMENT in the menu bar,
+    a)A dropdown is displayed containing options
+    -Corpus1 
+    -Corpus2 
+    -Corpus3 
+    b)Corpus data is displayed when respected option is selected from the dropdown list.
+    c)A text showing "Enter the number of tokens and types for the above corpus" along with two input fields is appear in the form of table, which takes two inputs.
+     -#tokens:(Here tokens means the word count in the above displayed information)
+     -#types:(here types means the number of unique word count in the above displayed information)
+    d) On clicking Submit Button, if the input in both the textboxes is true then "Right Answer" is display changing the background color of textboxes to green, else "Wrong answer" is    displayed making the background of textboxes to red. 
+ 	  e)If the input is correct, on submitting a contiue button appears When clicked on Continue button Submit button is hidden and, a text is displayed saying "Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.". A textbox is appeared below the above text which wants input #new types along with a submit button below the textbox.
+
+    f) When clicked on Submit button, if the input is wrong answer then, input textbox background becomes "red" and a Message is displayed showing "Wrong answer"
+    if the input in textbox is right answer then, input textbox background become green and a Message is displayed showing "Right answer"
+6)when clicked on quizzes a set of questions related to the experiment are displayed.
+7)when clicked on procedure the below is displayed
+   Procedure
+    STEP1: Select the corpus.
+    STEP2: Submit the number of tokens and types in the given text box.
+    STEP3: If your answer is correct, you can enter the number of types of root and check your answer.
+
+//Missing Functionality in this lab experiment.
+
+1) When clicked on QUIZZES in the menu bar the questions related to the experiment are displayed but there is no way of submitting the answers.
+2)The procedure is not clearly explained.
