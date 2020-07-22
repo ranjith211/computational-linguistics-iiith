@@ -1,10 +1,9 @@
-﻿
-var englishsentences = ['The child liked the chocolate.','She was stopped by the bravest knight.','Mary baked a cake for his birthday.','She decorated the cake carefully.','Mary wore a dress with polka dots.'];
+﻿var englishsentences = ['The child liked the chocolate.','She was stopped by the bravest knight.','Mary baked a cake for his birthday.','She decorated the cake carefully.','Mary wore a dress with polka dots.'];
 
 var hindisentences   = ['राम ने सीता के लिए फल तोड़ा।','छोटे बच्चे पाठशाला जल्दी आयेंगे।','मेहनत का फल मीठा होता है।','वाह! वह खूबसूरत है।','पेड़ से पत्ते गिर गए।'];
 
 
-function tab() {
+function tab(){
     show = "",partVal=[];
     document.getElementById("inp").innerHTML = "<i>Select the POS tag for corresponding words</i>";
     if(document.getElementById("englishh").selected){
@@ -42,7 +41,6 @@ function tab() {
     document.getElementById("out").innerHTML = colum.trim();
         document.getElementById('submitbutton').innerHTML = "<button onclick='partofspeechvalues()'>Submit</button>";
 }
-
 function partselect(id, value) {
     if(id==='partdropdown0')
         partVal[0]=value;
@@ -62,10 +60,6 @@ function partselect(id, value) {
 function partofspeechvalues() {
     console.log(partVal,partVal.length);
 } 
-
-
-
-
 var show="", partdrop, partVal,show1="",enganswers=[],index,f=0;
 function selection(){
     if(document.getElementById("default").selected)
