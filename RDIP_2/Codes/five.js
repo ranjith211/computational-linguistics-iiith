@@ -40,7 +40,8 @@ function partselect(id, value){
             partVal[i]="Noun";}
     document.getElementById("out").innerHTML = colum.trim();
         document.getElementById('submitbutton').innerHTML = "<button onclick='findout()'>Submit</button>";
-}function check(){
+}//functionality of Get Answer button
+function check(){
     var answerid = ['answer0','answer1','answer2','answer3','answer4','answer5','answer6'];
     if(document.getElementById('englishh').selected){
     for(var i = 0; i < show.length; i++)
