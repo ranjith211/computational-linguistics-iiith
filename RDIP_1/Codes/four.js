@@ -4,89 +4,60 @@ corpus3="A man had a little dog, and he was very fond of it. He would pat a he i
 
 //making the Corpus selection dropdown
 //Displays table and information 
-function viewcorpus(){
-	var a=document.getElementById("selected").value;
-	if(a=="Corpus1"){
-		document.getElementById("answer").innerHTML="";
-		document.getElementById("three").innerHTML="";
-		document.getElementById("continue").innerHTML="";
-		document.getElementById("tab1").innerHTML="";
-		document.getElementById("one").innerHTML=corpus1;
-		document.getElementById("display").innerHTML="Enter the number of tokens and types for the above corpus:";
-		document.getElementById("two").innerHTML="<table><tr><td>"+"#tokens:"+"</td><td>"+"<input id='token' type='text'>"+"</td></tr><tr><td>"+"#types:"+"</td><td>"+"<input id='types' type='text'>"+"</td></tr></table>";
-		document.getElementById("three").innerHTML="<button onclick='compare(corpus1)'>Submit</button>"
-		//document.getElementById("submitBtn").innerHTML="<button onclick='compare(corpus1)'>Submit</button>"
-	}
-	if(a=="Corpus2"){
-		document.getElementById("answer").innerHTML="";
-		document.getElementById("three").innerHTML="";
-		document.getElementById("continue").innerHTML="";
-		document.getElementById("tab1").innerHTML="";
-		document.getElementById("one").innerHTML=corpus2;
-		document.getElementById("display").innerHTML="Enter the number of tokens and types for the above corpus:";
-		document.getElementById("two").innerHTML="<table><tr><td>"+"#tokens:"+"</td><td>"+"<input id='token' type='text'>"+"</td></tr><tr><td>"+"#types:"+"</td><td>"+"<input id='types' type='text'>"+"</td></tr></table?";
-		document.getElementById("three").innerHTML="<button onclick='compare(corpus2)'>Submit</button>"
-		//document.getElementById("submitBtn").innerHTML="<button onclick='compare(corpus1)'>Submit</button>"
 
-	}
-	if(a=="Corpus3"){
-		document.getElementById("answer").innerHTML="";
-		document.getElementById("three").innerHTML="";
-		document.getElementById("continue").innerHTML="";
-		document.getElementById("tab1").innerHTML="";
-		document.getElementById("one").innerHTML=corpus3;
-		document.getElementById("display").innerHTML="Enter the number of tokens and types for the above corpus:";
-		document.getElementById("two").innerHTML="<table><tr><td>"+"#tokens:"+"</td><td>"+"<input id='token' type='text'>"+"</td></tr><tr><td>"+"#types:"+"</td><td>"+"<input id='types' type='text'>"+"</td></tr></table>";
-		document.getElementById("three").innerHTML="<button onclick='compare(corpus3)'>Submit</button>"
-		//adocument.getElementById("submitBtn").innerHTML="<button onclick='compare(corpus1)'>Submit</button>"
-
-	}
+function next(){
+	document.getElementById("answer").innerHTML="";
+	document.getElementById('four').innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types";
+	document.getElementById("three").style.visibility="hidden";
+	document.getElementById('continue').innerHTML="#New types:";
+	document.getElementById('five').innerHTML="<input id='newtype' type=text>";
 }
 
-function functoken(str){
+
+function functokens(str){
 	str=str.replace(/[^a-zA-Z ]/g, "")
 	str = str.split(" ");
 	return str.length;
 }
 
-function types(str){
+function functypes(str){
 	str=str.replace(/[^a-zA-Z ]/g, "")
 	str= str.toLowerCase();
 	str = str.split(" ");
-	var unique = str.filter(uniqueWords);
+	var unique = str.filter(distinct);
 	return unique.length;
 
 }
 
-function uniqueWords(value, index, self) { 
+function distinct(value, index, self) { 
     return self.indexOf(value) === index;
 }
 
-function compare(corp){
+function validate(corp){
 	document.getElementById('continue').innerHTML="";
 	var token= document.getElementById('token').value;
 	var type1= document.getElementById('types').value;
 	var x=document.getElementById('token').innerHTML;
-	if(token== functoken(corp) && type1== types(corp)){
+	if(token== functokens(corp) && type1== functypes(corp)){
 		document.getElementById('answer').innerHTML="Right answer!";
 		document.getElementById('answer').style.color="green";
 		document.getElementById('token').style.backgroundColor="green";
 		document.getElementById('types').style.backgroundColor="green";
-		document.getElementById('continue').innerHTML="<button >continue</button>";
+		document.getElementById('continue').innerHTML="<button onclick='next()'>continue</button>";
 	}
-	if(token== functoken(corp) && type1!= types(corp)){
+	if(token== functokens(corp) && type1!= functypes(corp)){
 		document.getElementById('answer').innerHTML="Wrong answer!";
 		document.getElementById('answer').style.color="red";
 		document.getElementById('token').style.backgroundColor="green";
 		document.getElementById('types').style.backgroundColor="red";
 	}
-	if(token!= functoken(corp) && type1== types(corp)){
+	if(token!= functokens(corp) && type1== functypes(corp)){
 		document.getElementById('answer').innerHTML="Wrong answer!";
 		document.getElementById('answer').style.color="red";
 		document.getElementById('token').style.backgroundColor="red";
 		document.getElementById('types').style.backgroundColor="green";
 	}
-	if(token!= functoken(corp) && type1!= types(corp)){
+	if(token!= functokens(corp) && type1!= functypes(corp)){
 		document.getElementById('answer').innerHTML="Wrong answer!";
 		document.getElementById('answer').style.color="red";
 		document.getElementById('token').style.backgroundColor="red";
@@ -95,9 +66,38 @@ function compare(corp){
 } 
 
 
-function newTypes(){
-	document.getElementById('answer').innerHTML="Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types";
-	document.getElementById("submitBtn").innerHTML="";
-	document.getElementById('continue').innerHTML="#New types:";
-	document.getElementById('tab1').innerHTML="<input id='newtype' type=text>";
+function viewcorpus(){
+	var a=document.getElementById("selected").value;
+	if(a=="Corpus1"){
+		document.getElementById("answer").innerHTML="";
+		document.getElementById("three").innerHTML="";
+		document.getElementById("continue").innerHTML="";
+		document.getElementById("five").innerHTML="";
+		document.getElementById("one").innerHTML=corpus1;
+		document.getElementById("display").innerHTML="Enter the number of tokens and types for the above corpus:";
+		document.getElementById("two").innerHTML="<table><tr><td>"+"#tokens:"+"</td><td>"+"<input id='token' type='text'>"+"</td></tr><tr><td>"+"#types:"+"</td><td>"+"<input id='types' type='text'>"+"</td></tr></table>";
+		document.getElementById("three").innerHTML="<button onclick='validate(corpus1)'>Submit</button>"
+	}
+	if(a=="Corpus2"){
+		document.getElementById("answer").innerHTML="";
+		document.getElementById("three").innerHTML="";
+		document.getElementById("continue").innerHTML="";
+		document.getElementById("five").innerHTML="";
+		document.getElementById("one").innerHTML=corpus2;
+		document.getElementById("display").innerHTML="Enter the number of tokens and types for the above corpus:";
+		document.getElementById("two").innerHTML="<table><tr><td>"+"#tokens:"+"</td><td>"+"<input id='token' type='text'>"+"</td></tr><tr><td>"+"#types:"+"</td><td>"+"<input id='types' type='text'>"+"</td></tr></table?";
+		document.getElementById("three").innerHTML="<button onclick='validate(corpus2)'>Submit</button>"
+
+	}
+	if(a=="Corpus3"){
+		document.getElementById("answer").innerHTML="";
+		document.getElementById("three").innerHTML="";
+		document.getElementById("continue").innerHTML="";
+		document.getElementById("five").innerHTML="";
+		document.getElementById("one").innerHTML=corpus3;
+		document.getElementById("display").innerHTML="Enter the number of tokens and types for the above corpus:";
+		document.getElementById("two").innerHTML="<table><tr><td>"+"#tokens:"+"</td><td>"+"<input id='token' type='text'>"+"</td></tr><tr><td>"+"#types:"+"</td><td>"+"<input id='types' type='text'>"+"</td></tr></table>";
+		document.getElementById("three").innerHTML="<button onclick='validate(corpus3)'>Submit</button>"
+
+	}
 }
