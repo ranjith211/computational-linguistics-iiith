@@ -5,7 +5,7 @@ var hindisentences   = ['राम ने सीता के लिए फल �
 
 
 function tab() {
-    show = "";
+    show = "",partVal=[];
     document.getElementById("inp").innerHTML = "<i>Select the POS tag for corresponding words</i>";
     if(document.getElementById("englishh").selected){
     if(document.getElementById("one").selected)
@@ -38,15 +38,44 @@ function tab() {
     show=show.split(" ");
     var colum="<tr id='tablerow' style='color:brown'><td>LEXICON</td><td>POS</td><td></td><td></td></tr>";
     for(var i = 0; i < show.length; i++)
-        colum = colum +"<tr id='id"+i+"'><td>"+show[i]+"</td><td><select id='partdropdown"+i+"' class='partdropdown'>"+partdrop+"</select></td><td></td><td></td></tr>";
+        colum = colum +"<tr id='id"+i+"'><td>"+show[i]+"</td><td><select id='partdropdown"+i+"' class='partdropdown' onchange='partselect(this.id,this.value)'>"+partdrop+"</select></td><td></td><td></td></tr>";
     document.getElementById("out").innerHTML = colum.trim();
+        document.getElementById('submitbutton').innerHTML = "<button onclick='partofspeechvalues()'>Submit</button>";
 }
-var show="", partdrop;
+
+function partselect(id, value) {
+    if(id==='partdropdown0')
+        partVal[0]=value;
+    else if(id==='partdropdown1')
+        partVal[1]=value;
+    else if(id==='partdropdown2')
+        partVal[2]=value;
+    else if(id==='partdropdown3')
+        partVal[3]=value;
+    else if(id==='partdropdown4')
+        partVal[4]=value;
+    else if(id==='partdropdown5')
+        partVal[5]=value;
+    else if(id==='partdropdown6')
+        partVal[6]=value;
+}
+function partofspeechvalues() {
+    console.log(partVal,partVal.length);
+} 
+
+
+
+
+var show="", partdrop, partVal,show1="",enganswers=[],index,f=0;
 function selection(){
     if(document.getElementById("default").selected)
         alert("Select a Language");
     else{
-        document.getElementById("dropthree").innerHTML = "<select id='droptwo' onchange='tab()'><option id='defaultone' value='Select a sentence'>---Select a sentence---</option><option id='one'> one</option><option id='two'></option><option id='three'></option><option id='four'></option><option id='five'></option></select>";
+        document.getElementById("dropthree").innerHTML = "<select id='droptwo' onchange='tab()'><option id='defaultone' value='Select a sentence'>---Select a sentence---</option><option id='one'></option><option id='two'></option><option id='three'></option><option id='four'></option><option id='five'></option></select>";
+        document.getElementById("inp").innerHTML = "";
+        document.getElementById("out").innerHTML = "";
+        document.getElementById("submitbutton").innerHTML = "";
+        partVal=[];
         if(document.getElementById("englishh").selected){
             document.getElementById("one").innerHTML   = englishsentences[0];
             document.getElementById("two").innerHTML   = englishsentences[1];

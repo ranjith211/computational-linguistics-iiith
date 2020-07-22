@@ -68,3 +68,11 @@ body{
     font-family : arial;
     font-size : 17px;
  } 
+ button {
+    margin-top : 24px;
+    font-size : 15px;
+    padding : 2px;
+    padding-left : 6px;
+    padding-right : 6px;
+    margin-bottom : 22px;
+ }
