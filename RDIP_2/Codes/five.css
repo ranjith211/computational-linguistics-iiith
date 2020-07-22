@@ -9,6 +9,9 @@ body{
    margin-right: auto;
    width:80%;
  }
+ #getbutton {
+    margin-top : -10px;
+ }
  #white{
    margin: auto;
    color: white;
