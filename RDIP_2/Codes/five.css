@@ -23,6 +23,9 @@ body{
     font-family : arial;
     font-size : 17px;
  }
+ #tablerow{
+    text-align : center;
+ }
  .main{
     text-align: center;
     width: 80%;
@@ -42,4 +45,21 @@ body{
     height:900px;
     background-color: white;
     align-content: center;
+ }
+ #inp{
+    color : blue;
+    font-family : Lucida Sans Unicode;
+ }
+ table {
+    border-collapse : collapse;
+    width : auto; 
+    margin : auto;
+    border-width : 10px;
+    text-align : left;
+    font-family : Lucida Sans Unicode;
+ }
+ td {
+    padding : 8px;
+    height : 30px;
+    border : 2px solid #ddd;
  }
