@@ -1,0 +1,20 @@
+Unit-5 Functionalities: 
+
+1.A select dropdown list to choose language among English or Hindi is appeared(SELECT LANGUAGE).
+2.After language selection a select dropdown to choose a sentence in the selected language is appeared.(SELECT SENTENCE)
+3.On selection of sentence a message "Select the POS tag for corresponding words" should be displayed(DISPLAY MESSAGE).
+4.DISPLAY TABLE FUNCTIONALITY:
+	i. A table with four columns and with rows that are equal to the number of words in the sentence.
+	ii. First column displays the words in the sentence
+	iii. Each row in second column displays a dropdown to select among the various parts of speech with "Noun" being the 
+	default option.
+	iv.Other two columns are to be empty.
+5.SUBMIT BUTTON FUNCTIONALITY: A submit button is displayed below the table.
+	i.On clicking the submit button all the selected Parts of speech must match with the correct answers.
+	ii.If correct then the corresponding row should display green tick symbol in the third column.
+	iii.If wrong then the corresponding row should display red cross synbol in the third column.
+	iv.If there is atleast one option wrong, then display a button "GET ANSWER"
+6.GET ANSWER BUTTON FUNCTIONALITY: 
+	i.On clicking this button the correct Parts of speech should be mentioned in the  fourth column.
+	ii.Text on the button should be change to "Hide the correct answer".
+	iii.On clicking "Hide the correct answer" button answers should be hidden and text on the button change to "Get answer".
