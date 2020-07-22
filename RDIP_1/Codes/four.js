@@ -45,6 +45,7 @@ function resub(str){
 		stemmer.stem();
 		s.push(stemmer.getCurrent());
 	}
+	alert(s);
 	var got = s.filter(distinct);
 	return got.length;
 }
