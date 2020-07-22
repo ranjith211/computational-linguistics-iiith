@@ -1,4 +1,5 @@
-﻿var englishsentences = ['The child liked the chocolate.','She was stopped by the bravest knight.','Mary baked a cake for his birthday.','She decorated the cake carefully.','Mary wore a dress with polka dots.'];
+﻿
+var englishsentences = ['The child liked the chocolate.','She was stopped by the bravest knight.','Mary baked a cake for his birthday.','She decorated the cake carefully.','Mary wore a dress with polka dots.'];
 
 var hindisentences   = ['राम ने सीता के लिए फल तोड़ा।','छोटे बच्चे पाठशाला जल्दी आयेंगे।','मेहनत का फल मीठा होता है।','वाह! वह खूबसूरत है।','पेड़ से पत्ते गिर गए।'];
 
@@ -17,6 +18,8 @@ function tab() {
         show=englishsentences[3];
     else if(document.getElementById("five").selected)
         show=englishsentences[4];
+    show=show.replace(".","");
+    partdrop = "<option id='part1' value='Noun'>Noun</option><option id='part2' value='Pronoun'>Pronoun</option><option id='part3' value='Verb'>Verb</option><option id='part4' value='Adjective'>Adjective</option><option id='part5' value='Adverb'>Adverb</option><option id='part6' value='Determiner'>Determiner</option><option id='part7' value='Preposition'>Preposition</option><option id='part8' value='Conjunction'>Conjunction</option><option id='part9' value='Interjection'>Interjection</option>";
     }
     else if(document.getElementById("hindii").selected){
     if(document.getElementById("one").selected)
@@ -29,16 +32,16 @@ function tab() {
         show=hindisentences[3];
     else if(document.getElementById("five").selected)
         show=hindisentences[4];
+    show=show.replace("।","");
+    partdrop = "<option id='part1' value='Noun'>Noun</option><option id='part2' value='Pronoun'>Pronoun</option><option id='part3' value='Verb'>Verb</option><option id='part4' value='Adjective'>Adjective</option><option id='part5' value='Adverb'>Adverb</option><option id='part6' value='Postposition'>Postposition</option><option id='part7' value='Conjunction'>Conjunction</option><option id='part8' value='Interjection'>Interjection</option>";
     }
     show=show.split(" ");
     var colum="<tr id='tablerow' style='color:brown'><td>LEXICON</td><td>POS</td><td></td><td></td></tr>";
     for(var i = 0; i < show.length; i++)
-        colum = colum +"<tr id='id"+i+"'><td>"+show[i]+"</td><td></td><td></td><td></td></tr>";
-
+        colum = colum +"<tr id='id"+i+"'><td>"+show[i]+"</td><td><select id='partdropdown"+i+"' class='partdropdown'>"+partdrop+"</select></td><td></td><td></td></tr>";
     document.getElementById("out").innerHTML = colum.trim();
-
 }
-var show="";
+var show="", partdrop;
 function selection(){
     if(document.getElementById("default").selected)
         alert("Select a Language");

@@ -63,3 +63,8 @@ body{
     height : 30px;
     border : 2px solid #ddd;
  }
+ .partdropdown {
+    height : 22px;
+    font-family : arial;
+    font-size : 17px;
+ } 
