@@ -1,0 +1,49 @@
+body{
+	font-size: 20px;
+	  background-color:#012943 ;
+
+}
+
+.main{
+	text-align: center;
+	width: 80%;
+	height:auto;
+	 background-color: rgb(204, 238, 238);
+	margin: 0 auto;
+	
+}
+.sub{
+	padding-top: 20px;
+	width: 90%;
+	height:900px;
+	background-color: white;
+	align-content: center;
+
+}
+#pic{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:80%;
+
+
+}
+#head{
+	padding:10px;
+	text-align: left;
+	font-size: 50px;
+	font-family: serif;
+}
+input{
+	width:60px;
+}
+option{
+	text-align: center;
+}
+
+table,tr,td{
+	align-content: center;
+	border: 1px solid black;
+	border-collapse: collapse; 
+	padding: 10px;
+}
