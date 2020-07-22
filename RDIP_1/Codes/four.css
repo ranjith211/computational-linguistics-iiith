@@ -2,7 +2,14 @@ body{
 	font-size: 20px;
 	  background-color:#012943 ;
 }
-
+#white{
+  margin: auto;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  width: 80%;
+  background-color: #1E90FF;
+}
 .main{
 	text-align: center;
 	width: 80%;
