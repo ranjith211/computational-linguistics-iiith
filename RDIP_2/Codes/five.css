@@ -18,6 +18,11 @@ body{
    width: 80%;
    background-color: #1E90FF;
  }
+ #drop, #droptwo {
+    height : 22px;
+    font-family : arial;
+    font-size : 17px;
+ }
  .main{
     text-align: center;
     width: 80%;
@@ -30,4 +35,11 @@ body{
     text-align: left;
     font-size: 50px;
     font-family: serif;
+ }
+ .sub{
+    padding-top: 20px;
+    width: 90%;
+    height:900px;
+    background-color: white;
+    align-content: center;
  }
