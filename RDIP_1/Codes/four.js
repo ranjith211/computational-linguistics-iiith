@@ -45,7 +45,7 @@ function resub(str){
 		stemmer.stem();
 		s.push(stemmer.getCurrent());
 	}
-	alert(s);
+	
 	var got = s.filter(distinct);
 	return got.length;
 }
@@ -148,7 +148,8 @@ function viewcorpus(){
 		document.getElementById("three").innerHTML="<button onclick='validate(corpus3)'>Submit</button>"
 	}
 }
-//function to compare the unique number of words after stemming and the answer entered by the user
+//Displaying correct or wrong answer
+
 function find(str){
 	document.getElementById("correct").innerHTML="";
 	document.getElementById("wrong").innerHTML="";
